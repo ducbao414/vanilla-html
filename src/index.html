@@ -27,6 +27,12 @@
 
     <h2 class="text-xl font-bold mt-8">Commands</h2>
     <p class="my-2 leading-relaxed">
+      Create a new multi-page vanilla html site:
+      <br>
+      <code>npm create vanilla-html-site@latest</code>
+    </p>
+
+    <p class="my-2 leading-relaxed">
       Start dev server with live reloading:
       <br>
       <code>npm run dev</code>
@@ -70,7 +76,7 @@
 
     <code>&lt;include src="./components/header.html"&gt;&lt;/include&gt;</code>
 
-    <p class="my-2 leading-relaxed">To pass data to a partial (the passed data is in JSON, not JS Object):</p>
+    <p class="my-2 leading-relaxed">To pass data to a partial (data must be in JSON, not JS object):</p>
 
     <pre class="my-2 leading-relaxed"><code>&lt;include src="./components/header.html"&gt;
   { "title": "vanilla-html guide" }
