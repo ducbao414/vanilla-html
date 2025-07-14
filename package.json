@@ -1,14 +1,19 @@
 {
-  "name": "parcel-vanilla-starter",
+  "name": "vanilla-html",
   "private": true,
   "version": "0.0.0",
-  "source": "src/index.html",
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build"
+    "dev": "parcel 'src/**/*.html' --no-source-maps --port 3000",
+    "build": "parcel build 'src/**/*.html' --no-source-maps",
+    "preview": "npx serve dist"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.11",
+    "tailwindcss": "^4.1.11"
+  },
   "devDependencies": {
-    "parcel": "^2.14.0"
+    "parcel": "^2.14.0",
+    "posthtml-include": "^2.0.1",
+    "serve": "^14.2.4"
   }
 }

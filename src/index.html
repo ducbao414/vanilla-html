@@ -1,13 +1,90 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parcel Vanilla App</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <h1>Parcel Vanilla App</h1>
-    <p>Edit <code>src/index.html</code> to get started!</p>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vanilla-html guide</title>
+  <link rel="icon" href="./favicon.png">
+  <link href="./style.css" rel="stylesheet" />
+</head>
+
+<body class="bg-zinc-100 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100">
+
+  <div class="max-w-3xl mx-auto p-4 guide">
+
+    <include src="./components/header.html">
+      {"title": "vanilla-html template"}
+    </include>
+
+    <p class="my-2 leading-relaxed">
+      A Multi-Page Vanilla HTML Template with Modern DX (Tailwind, Live Reload, Partials, etc.)
+    </p>
+    <p class="my-2 leading-relaxed">
+      <strong>vanilla-html</strong> is unopinionated - write plain HTML, JS, and CSS, or
+      <code>npm install react react-dom</code> if you prefer.
+    </p>
+
+    <h2 class="text-xl font-bold mt-8">Commands</h2>
+    <p class="my-2 leading-relaxed">
+      Start dev server with live reloading:
+      <br>
+      <code>npm run dev</code>
+    </p>
+
+    <p class="my-2 leading-relaxed">
+      Build for production, output to dist folder:
+      <br>
+      <code>npm run build</code>
+    </p>
+
+    <p class="my-2 leading-relaxed">
+      Preview dist folder:
+      <br>
+      <code>npm run preview</code>
+    </p>
+
+    <p class="my-2 leading-relaxed">
+      Deploy to <a href="https://pages.cloudflare.com/">Cloudflare Pages</a>:
+      <br>
+      <code>npm run build && npx wrangler pages deploy dist</code>
+    </p>
+
+    <h2 class="text-xl font-bold mt-8">Routing</h2>
+    <p class="my-2 leading-relaxed">
+      It uses file-based routing. Your src folder structure defines the URLs.
+      <br>
+      Organize your HTML, scripts, styles, and assets (images, videos) freely within src and its subfolders.
+    </p>
+
+    <p class="my-2 leading-relaxed">For example: this <a href="./other/about.html">About page</a> is resides in
+      src/other/ folder</p>
+    <code>&lt;a href=&quot;./other/about.html&quot;&gt;About page&lt;/a&gt;</code>
+    <p class="my-2">Note the ./ at the beginning, it's a relative path.</p>
+
+    <h2 class="text-xl font-bold mt-8">HTML Components/Partials</h2>
+    <p class="my-2 leading-relaxed"><strong>vanilla-html</strong> uses posthtml-include to support HTML components.</p>
+
+    <p class="my-2 leading-relaxed">Write your HTML components in src/components and include them in your HTML files
+      like this:</p>
+
+    <code>&lt;include src="./components/header.html"&gt;&lt;/include&gt;</code>
+
+    <p class="my-2 leading-relaxed">To pass data to a partial (the passed data is in JSON, not JS Object):</p>
+
+    <pre class="my-2 leading-relaxed"><code>&lt;include src="./components/header.html"&gt;
+  { "title": "vanilla-html guide" }
+&lt;/include&gt;
+</code></pre>
+
+    <p class="my-2 leading-relaxed">For more details, see the <a href="https://github.com/posthtml/posthtml-include"
+        target="_blank">posthtml-include
+        documentation</a>.</p>
+
+  </div>
+
+  <script src="./index.js"></script>
+
+</body>
+
 </html>
