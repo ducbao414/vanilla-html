@@ -74,3 +74,10 @@ To pass data to a partial (data must be in JSON, not JS object):
 ```
 
 ---
+
+## Public folder
+
+For public files not referenced in `src` (e.g. `robots.txt`), you can place them in the `public` folder.
+
+`vanilla-html` will watch `public` folder for changes and copies its contents to the final `dist` build output.
+
