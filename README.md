@@ -45,7 +45,7 @@ npm run build && npx wrangler pages deploy dist
 It uses file-based routing. Your `src` folder structure defines the URLs.  
 Organize your HTML, scripts, styles, and assets (images, videos) freely within `src` and its subfolders.
 
-For example: this [About page](https://vanilla-html.pages.dev/other/about.html) resides in the `src/other/` folder.
+For example: this [About page](https://vani.b95.dev/other/about.html) resides in the `src/other/` folder.
 
 ```html
 <a href="./other/about.html">About page</a>
