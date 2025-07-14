@@ -29,10 +29,14 @@ Preview `dist` folder:
 npm run preview
 ```
 
-Deploy to [Cloudflare Pages](https://pages.cloudflare.com/):  
+Deploy to [Cloudflare Pages](https://pages.cloudflare.com/):
+
 ```bash
 npm run build && npx wrangler pages deploy dist
 ```
+
+
+*Not necessarily Cloudflare Pages, I just mentioned it because I'm a Cloudflare fanboy.*
 
 ---
 
