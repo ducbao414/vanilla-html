@@ -9,6 +9,11 @@ A Multi-Page Vanilla HTML Template with Modern DX (Tailwind, Live Reload, Partia
 
 ## Commands
 
+Create a new multi-page vanilla html site:  
+```bash
+npm create vanilla-html-site@latest
+```
+
 Start dev server with live reloading:  
 ```bash
 npm run dev
