@@ -1,0 +1,67 @@
+# vanilla-html template
+
+A Multi-Page Vanilla HTML Template with Modern DX (Tailwind, Live Reload, Partials, etc.)
+
+**vanilla-html** is unopinionated - write plain HTML, JS, and CSS, or  
+`npm install react react-dom` if you prefer.
+
+---
+
+## Commands
+
+Start dev server with live reloading:  
+```bash
+npm run dev
+```
+
+Build for production, output to `dist` folder:  
+```bash
+npm run build
+```
+
+Preview `dist` folder:  
+```bash
+npm run preview
+```
+
+Deploy to [Cloudflare Pages](https://pages.cloudflare.com/):  
+```bash
+npm run build && npx wrangler pages deploy dist
+```
+
+---
+
+## Routing
+
+It uses file-based routing. Your `src` folder structure defines the URLs.  
+Organize your HTML, scripts, styles, and assets (images, videos) freely within `src` and its subfolders.
+
+For example: this [About page](https://vanilla-html.pages.dev/other/about.html) resides in the `src/other/` folder.
+
+```html
+<a href="./other/about.html">About page</a>
+```
+
+Note the `./` at the beginning - it's a relative path.
+
+---
+
+## HTML Components / Partials
+
+**vanilla-html** uses [`posthtml-include`](https://github.com/posthtml/posthtml-include) to support HTML components.
+
+Write your HTML components in `src/components` and include them in your HTML files like this:
+
+```html
+<include src="./components/header.html"></include>
+```
+
+To pass data to a partial (data must be in JSON, not JS object):
+
+```html
+<include src="./components/header.html">
+  { "title": "vanilla-html guide" }
+</include>
+```
+
+---
