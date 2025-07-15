@@ -43,7 +43,7 @@ npm run build && npx wrangler pages deploy dist
 
 ## Routing
 
-It uses file-based routing. Your `src` folder structure defines the URLs.  
+**vanilla-html** uses file-based routing. Your `src` folder structure defines the URLs.  
 Organize your HTML, scripts, styles, and assets (images, videos) freely within `src` and its subfolders.
 
 For example: this [About page](https://vani.b95.dev/other/about.html) resides in the `src/other/` folder.
