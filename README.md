@@ -60,13 +60,23 @@ Note the `./` at the beginning - it's a relative path.
 
 **vanilla-html** uses [`posthtml-include`](https://github.com/posthtml/posthtml-include) to support HTML components.
 
-Write your HTML components in `src/components` and include them in your HTML files like this:
+Write your HTML components in `src/components`:
+
+```html
+<header>
+  <h1 class="font-bold text-3xl">
+    {{title}}
+  </h1>
+</header>
+```
+
+Include them in your HTML files:
 
 ```html
 <include src="./components/header.html"></include>
 ```
 
-To pass data to a partial (data must be in JSON, not JS object):
+To pass data to the component (data must be in JSON, not JS object):
 
 ```html
 <include src="./components/header.html">
