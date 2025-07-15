@@ -1,4 +1,4 @@
-# A Multi-Page Vanilla HTML Template with Modern DX (Tailwind, Live Reload, Partials, etc.)
+# A Multi-Page Vanilla HTML Template with Modern DX (Tailwind, Live Reload, Components, etc.)
 
 **vanilla-html** is unopinionated and uses file-based routing (similar to the good old web).
 
@@ -44,7 +44,7 @@ npm run build && npx wrangler pages deploy dist
 ## Routing
 
 **vanilla-html** uses file-based routing. Your `src` folder structure defines the URLs.  
-Organize your HTML, scripts, styles, and assets (images, videos) freely within `src` and its subfolders.
+Organize your HTML, scripts, styles, and assets (images, videos) however you see fit within `src` and its subfolders.
 
 For example: this [About page](https://vani.b95.dev/other/about.html) resides in the `src/other/` folder.
 
@@ -80,5 +80,5 @@ To pass data to a partial (data must be in JSON, not JS object):
 
 For public files not referenced in `src` (e.g. `robots.txt`), you can place them in the `public` folder.
 
-`vanilla-html` will watch `public` folder for changes and copies its contents to the final `dist` build output.
+`vanilla-html` will watch `public` folder for changes and copies its contents to `dist` build output.
 
