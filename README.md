@@ -1,9 +1,8 @@
-# vanilla-html template
+# A Multi-Page Vanilla HTML Template with Modern DX (Tailwind, Live Reload, Partials, etc.)
 
-A Multi-Page Vanilla HTML Template with Modern DX (Tailwind, Live Reload, Partials, etc.)
+**vanilla-html** is unopinionated and uses file-based routing (similar to the good old web).
 
-**vanilla-html** is unopinionated - write plain HTML, JS, and CSS, or  
-`npm install react react-dom` if you prefer.
+You can write plain HTML, JS, and CSS, or `npm install react react-dom` if you prefer.
 
 Tailwind CSS is included by default. You can install additional UI libraries like DaisyUI if desired.
 
