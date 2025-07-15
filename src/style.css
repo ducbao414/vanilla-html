@@ -24,7 +24,7 @@ pre {
 
 .guide a {
   text-decoration: underline;
-  color: blue;
+  color: oklch(52.7% 0.154 150.069);
 }
 
 @media (prefers-color-scheme: dark) {

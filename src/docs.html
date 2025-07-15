@@ -18,7 +18,7 @@
     </include>
 
     <p class="my-2 leading-relaxed">
-      A Multi-Page Vanilla HTML Template with Modern DX (Tailwind, Live Reload, Partials, etc.)
+      A Multi-Page Vanilla HTML Template with Modern DX (Tailwind, Live Reload, Components, etc.)
     </p>
     <p class="my-2 leading-relaxed">
       <strong>vanilla-html</strong> is unopinionated and uses file-based routing (similar to the good old web). 
@@ -37,25 +37,25 @@
       <code>npm create vanilla-html-site@latest</code>
     </p>
 
-    <p class="my-2 leading-relaxed">
+    <p class="mt-4 leading-relaxed">
       Start dev server with live reloading:
       <br>
       <code>npm run dev</code>
     </p>
 
-    <p class="my-2 leading-relaxed">
+    <p class="mt-4 leading-relaxed">
       Build for production, output to dist folder:
       <br>
       <code>npm run build</code>
     </p>
 
-    <p class="my-2 leading-relaxed">
+    <p class="mt-4 leading-relaxed">
       Preview dist folder:
       <br>
       <code>npm run preview</code>
     </p>
 
-    <p class="my-2 leading-relaxed">
+    <p class="mt-4 leading-relaxed">
       Deploy to <a href="https://pages.cloudflare.com/">Cloudflare Pages</a>:
       <br>
       <code>npm run build && npx wrangler pages deploy dist</code>
@@ -78,21 +78,29 @@
     <p class="my-2">Note the ./ at the beginning, it's a relative path.</p>
 
     <h2 class="text-xl font-bold mt-8">HTML Components/Partials</h2>
-    <p class="my-2 leading-relaxed"><strong>vanilla-html</strong> uses posthtml-include to support HTML components.</p>
+    <p class="my-2 leading-relaxed"><strong>vanilla-html</strong> uses <a href="https://github.com/posthtml/posthtml-include">posthtml-include</a> to support HTML components.</p>
 
-    <p class="my-2 leading-relaxed">Write your HTML components in src/components and include them in your HTML files
-      like this:</p>
+    <p class="my-2 leading-relaxed">Write your HTML components in src/components:</p>
 
-    <code>&lt;include src="./components/header.html"&gt;&lt;/include&gt;</code>
+    <pre class="my-2 leading-relaxed">&lt;header&gt;
+  &lt;h1 class="font-bold text-3xl"&gt;
+    {{title}}
+  &lt;/h1&gt;
+&lt;/header&gt;</pre>
 
-    <p class="my-2 leading-relaxed">To pass data to a partial (data must be in JSON, not JS object):</p>
+
+    <p class="mt-4 leading-relaxed">Include them in your HTML files:</p>
+
+    <pre class="my-2">&lt;include src="./components/header.html"&gt;&lt;/include&gt;</pre>
+
+    <p class="mt-4 leading-relaxed">To pass data to the component (data must be in JSON, not JS object):</p>
 
     <pre class="my-2 leading-relaxed"><code>&lt;include src="./components/header.html"&gt;
   { "title": "vanilla-html guide" }
 &lt;/include&gt;
 </code></pre>
 
-    <p class="my-2 leading-relaxed">For more details, see the <a href="https://github.com/posthtml/posthtml-include"
+    <p class="my-4 leading-relaxed">For more details, see the <a href="https://github.com/posthtml/posthtml-include"
         target="_blank">posthtml-include
         documentation</a>.</p>
 
