@@ -5,6 +5,8 @@ A Multi-Page Vanilla HTML Template with Modern DX (Tailwind, Live Reload, Partia
 **vanilla-html** is unopinionated - write plain HTML, JS, and CSS, or  
 `npm install react react-dom` if you prefer.
 
+Tailwind CSS is included by default. You can install additional UI libraries like DaisyUI if desired.
+
 ---
 
 ## Commands
