@@ -1,4 +1,4 @@
-# A Multi-Page Vanilla HTML Template with Modern DX (Tailwind, Live Reload, Components, etc.)
+# A Multi-Page Vanilla HTML Template with Modern DX (Tailwind, Live Reload, Components, NPM Packages, etc.)
 
 **vanilla-html** is unopinionated and uses file-based routing (similar to the good old web).
 
@@ -30,6 +30,10 @@ Preview `dist` folder:
 npm run preview
 ```
 
+## Deployment
+
+Since the build output (`dist`) is static vanilla HTML files, you can deploy it on shared hosting (e.g., with cPanel), VPS, Cloudflare Pages, Netlify, Vercel, etc.
+
 Deploy to [Cloudflare Pages](https://pages.cloudflare.com/):
 
 ```bash
@@ -38,9 +42,6 @@ npm run build && npx wrangler pages deploy dist
 
 
 *Not necessarily Cloudflare Pages, I just mentioned it because I'm a Cloudflare fanboy.*
-
-Since the build output (`dist`) is static vanilla HTML files, you can deploy it on shared hosting (e.g., with cPanel), VPS, Cloudflare Pages, Netlify, Vercel, etc.
-
 
 ---
 
@@ -94,4 +95,22 @@ To pass data to the component (data must be in JSON, not JS object):
 For public files not referenced in `src` (e.g. `robots.txt`), you can place them in the `public` folder.
 
 `vanilla-html` will watch `public` folder for changes and copies its contents to `dist` build output.
+
+## NPM Packages
+
+`vanilla-html` uses Parcel for bundling so you can `npm install` packages if needed
+
+Example: 
+
+```bash
+npm install alpinejs
+```
+
+```html
+<script type="module">
+  import Alpine from 'alpinejs'
+
+  Alpine.start()
+</script>
+```
 
