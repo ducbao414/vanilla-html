@@ -40,8 +40,15 @@ Deploy to [Cloudflare Pages](https://pages.cloudflare.com/):
 npm run build && npx wrangler pages deploy dist
 ```
 
+Deploy to [Netlify](https://www.netlify.com/):
 
-*Not necessarily Cloudflare Pages, I just mentioned it because I'm a Cloudflare fanboy.*
+```bash
+npm run build && npx netlify deploy --prod --dir=dist
+```
+
+Deploy to shared hosting (cPanel):
+
+Run `npm run build` then upload contents of `dist` folder to your `public_html` directory.
 
 ---
 
