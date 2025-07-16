@@ -39,6 +39,9 @@ npm run build && npx wrangler pages deploy dist
 
 *Not necessarily Cloudflare Pages, I just mentioned it because I'm a Cloudflare fanboy.*
 
+Since the build output (`dist`) is static vanilla HTML files, you can deploy it on shared hosting (e.g., with cPanel), VPS, Cloudflare Pages, Netlify, Vercel, etc.
+
+
 ---
 
 ## Routing
