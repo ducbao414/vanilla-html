@@ -58,6 +58,8 @@ For example: this [About page](https://vani.b95.dev/other/about.html) resides in
 
 Note the `./` at the beginning - it's a relative path.
 
+For `link`, `a`, `script`, `img` tags, and similar elements, all `href` and `src` attributes should use relative paths.
+
 ---
 
 ## HTML Components / Partials
