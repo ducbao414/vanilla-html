@@ -18,7 +18,7 @@
     </include>
 
     <p class="my-2 leading-relaxed">
-      A Multi-Page Vanilla HTML Template with Modern DX (Tailwind, Live Reload, Components, etc.)
+      A Multi-Page Vanilla HTML Template with Modern DX (Tailwind, Live Reload, Components, NPM Packages, etc.)
     </p>
     <p class="my-2 leading-relaxed">
       <strong>vanilla-html</strong> is unopinionated and uses file-based routing (similar to the good old web). 
@@ -55,6 +55,12 @@
       <code>npm run preview</code>
     </p>
 
+    <h2 class="text-xl font-bold mt-8">Deployment</h2>
+
+    <p class="my-2 leading-relaxed">
+      Since the build output (<code>dist</code>) is static vanilla HTML files, you can deploy it on shared hosting (e.g., with cPanel), VPS, Cloudflare Pages, Netlify, Vercel, etc.
+    </p>
+
     <p class="mt-4 leading-relaxed">
       Deploy to <a href="https://pages.cloudflare.com/">Cloudflare Pages</a>:
       <br>
@@ -65,9 +71,6 @@
       <i>Not necessarily Cloudflare Pages, I just mentioned it because I'm a Cloudflare fanboy.</i>
     </p>
 
-    <p class="my-2 leading-relaxed">
-      Since the build output (<code>dist</code>) is static vanilla HTML files, you can deploy it on shared hosting (e.g., with cPanel), VPS, Cloudflare Pages, Netlify, Vercel, etc.
-    </p>
 
     <h2 class="text-xl font-bold mt-8">Routing</h2>
     <p class="my-2 leading-relaxed">
@@ -79,7 +82,9 @@
     <p class="my-2 leading-relaxed">For example: this <a href="./other/about.html">About page</a> is resides in
       src/other/ folder</p>
     <code>&lt;a href=&quot;./other/about.html&quot;&gt;About page&lt;/a&gt;</code>
-    <p class="my-2">Note the ./ at the beginning, it's a relative path.</p>
+    <p class="my-4">Note the ./ at the beginning, it's a relative path.</p>
+
+    <p class="my-4 leading-relaxed">For <code>link</code>, <code>a</code>, <code>script</code>, <code>img</code> tags, and similar elements, all <code>href</code> and <code>src</code> attributes should use relative paths.</p>
 
     <h2 class="text-xl font-bold mt-8">HTML Components/Partials</h2>
     <p class="my-2 leading-relaxed"><strong>vanilla-html</strong> uses <a href="https://github.com/posthtml/posthtml-include">posthtml-include</a> to support HTML components.</p>
@@ -114,6 +119,22 @@
       <br>
       vanilla-html will watch public folder for changes and copies its contents to the final dist build output.
     </p>
+
+    <h2 class="text-xl font-bold mt-8">NPM Packages</h2>
+  
+    <p class="my-2 leading-relaxed"><strong>vanilla-html</strong> uses Parcel for bundling so you can <code>npm install</code> packages if needed.</p>
+
+    <p class="my-2 leading-relaxed">Example:</p>
+
+    <p class="my-2 leading-relaxed">
+      <code>npm install alpinejs</code>
+    </p>
+
+    <pre class="my-2 leading-relaxed">&lt;script type=&quot;module&quot;&gt;
+&nbsp; import Alpine from &#39;alpinejs&#39;
+
+&nbsp; Alpine.start()
+&lt;/script&gt;</pre>
 
   </div>
 
