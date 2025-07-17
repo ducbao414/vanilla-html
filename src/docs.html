@@ -30,7 +30,7 @@
       Tailwind CSS is included by default. You can install additional UI libraries like <a href="https://daisyui.com/">DaisyUI</a> if desired.
     </p>
 
-    <h2 class="text-xl font-bold mt-8">Commands</h2>
+    <h2 class="text-xl font-bold mt-8">Getting Started</h2>
     <p class="my-2 leading-relaxed">
       Create a new multi-page vanilla html site:
     </p>
@@ -50,23 +50,6 @@
       Preview dist folder:
     </p>
     <p class="my-2"><code>npm run preview</code></p>
-
-    <h2 class="text-xl font-bold mt-8">Deployment</h2>
-
-    <p class="my-2 leading-relaxed">
-      Since the build output (<code>dist</code>) is static vanilla HTML files, you can deploy it on shared hosting (e.g., with cPanel), VPS, Cloudflare Pages, Netlify, Vercel, etc.
-    </p>
-
-    <p class="mt-4 leading-relaxed">
-      Deploy to <a href="https://pages.cloudflare.com/">Cloudflare Pages</a>:
-    </p>
-    <p class="my-2"><code>npm run build && npx wrangler pages deploy dist</code></p>
-
-    <p class="mt-4 leading-relaxed">Deploy to <a href="https://www.netlify.com/">Netlify</a>:</p>
-    <p class="my-2"><code>npm run build && npx netlify deploy --prod --dir=dist</code></p>
-
-    <p class="mt-4 leading-relaxed">Deploy to shared hosting (cPanel):</p>
-    <p class="my-2 leading-relaxed">Run <code>npm run build</code> then upload contents of <code>dist</code> folder to your <code>public_html</code> directory</p>
 
     <h2 class="text-xl font-bold mt-8">Routing</h2>
     <p class="my-2 leading-relaxed">
@@ -143,6 +126,25 @@
 
 &nbsp; Alpine.start()
 &lt;/script&gt;</pre>
+
+
+    <h2 class="text-xl font-bold mt-8">Deployment</h2>
+
+    <p class="my-2 leading-relaxed">
+      Since the build output (<code>dist</code>) is static vanilla HTML files, you can deploy it on shared hosting (e.g., with cPanel), VPS, Cloudflare Pages, Netlify, Vercel, etc.
+    </p>
+
+    <p class="mt-4 leading-relaxed">
+      Deploy to <a href="https://pages.cloudflare.com/">Cloudflare Pages</a>:
+    </p>
+    <p class="my-2"><code>npm run build && npx wrangler pages deploy dist</code></p>
+
+    <p class="mt-4 leading-relaxed">Deploy to <a href="https://www.netlify.com/">Netlify</a>:</p>
+    <p class="my-2"><code>npm run build && npx netlify deploy --prod --dir=dist</code></p>
+
+    <p class="mt-4 leading-relaxed">Deploy to shared hosting (cPanel):</p>
+    <p class="my-2 leading-relaxed">Run <code>npm run build</code> then upload contents of <code>dist</code> folder to your <code>public_html</code> directory</p>
+
 
   </div>
 
