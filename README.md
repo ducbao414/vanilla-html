@@ -6,7 +6,7 @@ You can write plain HTML, JS, and CSS, or `npm install react react-dom` if you p
 
 Tailwind CSS is included by default. You can install additional UI libraries like DaisyUI if desired.
 
-## Commands
+## Getting Started
 
 Create a new multi-page vanilla html site:  
 ```bash
@@ -27,26 +27,6 @@ Preview `dist` folder:
 ```bash
 npm run preview
 ```
-
-## Deployment
-
-Since the build output (`dist`) is static vanilla HTML files, you can deploy it on shared hosting (e.g., with cPanel), VPS, Cloudflare Pages, Netlify, Vercel, etc.
-
-Deploy to [Cloudflare Pages](https://pages.cloudflare.com/):
-
-```bash
-npm run build && npx wrangler pages deploy dist
-```
-
-Deploy to [Netlify](https://www.netlify.com/):
-
-```bash
-npm run build && npx netlify deploy --prod --dir=dist
-```
-
-Deploy to shared hosting (cPanel):
-
-Run `npm run build` then upload contents of `dist` folder to your `public_html` directory.
 
 ## Routing
 
@@ -130,3 +110,22 @@ npm install alpinejs
 </script>
 ```
 
+## Deployment
+
+Since the build output (`dist`) is static vanilla HTML files, you can deploy it on shared hosting (e.g., with cPanel), VPS, Cloudflare Pages, Netlify, Vercel, etc.
+
+Deploy to [Cloudflare Pages](https://pages.cloudflare.com/):
+
+```bash
+npm run build && npx wrangler pages deploy dist
+```
+
+Deploy to [Netlify](https://www.netlify.com/):
+
+```bash
+npm run build && npx netlify deploy --prod --dir=dist
+```
+
+Deploy to shared hosting (cPanel):
+
+Run `npm run build` then upload contents of `dist` folder to your `public_html` directory.
