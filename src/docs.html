@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>vanilla-html docs</title>
-  <link rel="icon" href="./favicon.png">
+  <link rel="icon" href="/favicon.png">
   <link href="./style.css" rel="stylesheet" />
 </head>
 
@@ -80,8 +80,27 @@
     <code>&lt;a href=&quot;./other/about.html&quot;&gt;About page&lt;/a&gt;</code>
     <p class="my-4">Note the ./ at the beginning, it's a relative path.</p>
 
-    <p class="my-4 leading-relaxed">For <code>link</code>, <code>a</code>, <code>script</code>, <code>img</code> tags, and similar elements, all <code>href</code> and <code>src</code> attributes should use relative paths.</p>
+    <h2 class="text-xl font-bold mt-8">File paths</h2>
 
+    <p class="my-2 leading-relaxed"><strong>vanilla-html</strong> supports both relative and absolute paths, just like traditional web development:</p>
+
+    <ul class="my-2 leading-relaxed">
+    <li><strong>Relative paths</strong> (e.g., <code>./images/hero.jpg</code>, <code>../styles/main.css</code>) are bundled and optimized by Parcel</li>
+    <li><strong>Absolute paths</strong> (e.g., <code>/logo.png</code>, <code>/themes/dark.css</code>) reference files in the <code>public</code> folder and are served as-is</li>
+    </ul>
+
+    <pre class="my-2 leading-relaxed"><code>&lt;!-- Bundled by Parcel --&gt;
+&lt;img src="./images/hero.jpg" alt="Hero"&gt;
+&lt;link rel="stylesheet" href="./styles/main.css"&gt;
+
+&lt;!-- Served from public folder --&gt;
+&lt;img src="/logo.png" alt="Logo"&gt;
+&lt;link rel="stylesheet" href="/themes/dark.css"&gt;</code></pre>
+
+    <h2 class="text-xl font-bold mt-8">Public folder</h2>
+
+    <p class="my-2 leading-relaxed">Files in the <code>public</code> folder are copied directly to the build output without processing. Use absolute paths (starting with <code>/</code>) to reference these files. <strong>vanilla-html</strong> will watch the public folder for changes during development.</p>
+    
     <h2 class="text-xl font-bold mt-8">HTML Components/Partials</h2>
     <p class="my-2 leading-relaxed"><strong>vanilla-html</strong> uses <a href="https://github.com/posthtml/posthtml-include">posthtml-include</a> to support HTML components.</p>
 
@@ -108,13 +127,6 @@
     <p class="my-4 leading-relaxed">For more details, see the <a href="https://github.com/posthtml/posthtml-include"
         target="_blank">posthtml-include
         documentation</a>.</p>
-
-    <h2 class="text-xl font-bold mt-8">Public folder</h2>
-    <p class="my-2 leading-relaxed">
-      For public files not referenced in src (e.g. <code>robots.txt</code>), you can place them in the public folder.
-      <br>
-      vanilla-html will watch public folder for changes and copies its contents to the final dist build output.
-    </p>
 
     <h2 class="text-xl font-bold mt-8">NPM Packages</h2>
   
