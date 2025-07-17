@@ -7,6 +7,15 @@
   <title>vanilla-html docs</title>
   <link rel="icon" href="/favicon.png">
   <link href="./style.css" rel="stylesheet" />
+
+  <style>
+    ul li {
+      list-style-type: disc;
+      margin-left: 1em;
+      margin-top: 0.5em;
+    }
+  </style>
+
 </head>
 
 <body class="bg-zinc-100 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100">
@@ -30,7 +39,17 @@
       Tailwind CSS is included by default. You can install additional UI libraries like <a href="https://daisyui.com/">DaisyUI</a> if desired.
     </p>
 
-    <h2 class="text-xl font-bold mt-8">Getting Started</h2>
+    <ul class="mt-4">
+      <li><a href="#getting-started">Getting Started</a></li>
+      <li><a href="#routing">Routing</a></li>
+      <li><a href="#file-paths">File Paths</a></li>
+      <li><a href="#public-folder">Public Folder</a></li>
+      <li><a href="#html-components">HTML Components / Partials</a></li>
+      <li><a href="#npm-packages">NPM Packages</a></li>
+      <li><a href="#deployment">Deployment</a></li>
+    </ul>
+
+    <h2 id="getting-started" class="text-xl font-bold mt-8">Getting Started</h2>
     <p class="my-2 leading-relaxed">
       Create a new multi-page vanilla html site:
     </p>
@@ -51,9 +70,9 @@
     </p>
     <p class="my-2"><code>npm run preview</code></p>
 
-    <h2 class="text-xl font-bold mt-8">Routing</h2>
+    <h2 id="routing" class="text-xl font-bold mt-8">Routing</h2>
     <p class="my-2 leading-relaxed">
-      <strong>vanilla-html</strong> uses file-based routing. Your src folder structure defines the URLs.
+      <strong>vanilla-html</strong> uses file-based routing. Your src folder structure defines the URLs, similar to the good old web.
       <br>
       Organize your HTML, scripts, styles, and assets (images, videos) however you see fit within src and its subfolders.
     </p>
@@ -63,7 +82,7 @@
     <code>&lt;a href=&quot;./other/about.html&quot;&gt;About page&lt;/a&gt;</code>
     <p class="my-4">Note the ./ at the beginning, it's a relative path.</p>
 
-    <h2 class="text-xl font-bold mt-8">File paths</h2>
+    <h2 id="file-paths" class="text-xl font-bold mt-8">File paths</h2>
 
     <p class="my-2 leading-relaxed"><strong>vanilla-html</strong> supports both relative and absolute paths, just like traditional web development:</p>
 
@@ -80,11 +99,11 @@
 &lt;img src="/logo.png" alt="Logo"&gt;
 &lt;link rel="stylesheet" href="/themes/dark.css"&gt;</code></pre>
 
-    <h2 class="text-xl font-bold mt-8">Public folder</h2>
+    <h2 id="public-folder" class="text-xl font-bold mt-8">Public folder</h2>
 
     <p class="my-2 leading-relaxed">Files in the <code>public</code> folder are copied directly to the build output without processing. Use absolute paths (starting with <code>/</code>) to reference these files. <strong>vanilla-html</strong> will watch the public folder for changes during development.</p>
     
-    <h2 class="text-xl font-bold mt-8">HTML Components/Partials</h2>
+    <h2 id="html-components" class="text-xl font-bold mt-8">HTML Components/Partials</h2>
     <p class="my-2 leading-relaxed"><strong>vanilla-html</strong> uses <a href="https://github.com/posthtml/posthtml-include">posthtml-include</a> to support HTML components.</p>
 
     <p class="my-2 leading-relaxed">Write your HTML components in src/components:</p>
@@ -111,7 +130,7 @@
         target="_blank">posthtml-include
         documentation</a>.</p>
 
-    <h2 class="text-xl font-bold mt-8">NPM Packages</h2>
+    <h2 id="npm-packages" class="text-xl font-bold mt-8">NPM Packages</h2>
   
     <p class="my-2 leading-relaxed"><strong>vanilla-html</strong> uses Parcel for bundling so you can <code>npm install</code> packages if needed.</p>
 
@@ -128,7 +147,7 @@
 &lt;/script&gt;</pre>
 
 
-    <h2 class="text-xl font-bold mt-8">Deployment</h2>
+    <h2 id="deployment" class="text-xl font-bold mt-8">Deployment</h2>
 
     <p class="my-2 leading-relaxed">
       Since the build output (<code>dist</code>) is static vanilla HTML files, you can deploy it on shared hosting (e.g., with cPanel), VPS, Cloudflare Pages, Netlify, Vercel, etc.
