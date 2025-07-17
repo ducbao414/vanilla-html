@@ -6,8 +6,6 @@ You can write plain HTML, JS, and CSS, or `npm install react react-dom` if you p
 
 Tailwind CSS is included by default. You can install additional UI libraries like DaisyUI if desired.
 
----
-
 ## Commands
 
 Create a new multi-page vanilla html site:  
@@ -50,8 +48,6 @@ Deploy to shared hosting (cPanel):
 
 Run `npm run build` then upload contents of `dist` folder to your `public_html` directory.
 
----
-
 ## Routing
 
 **vanilla-html** uses file-based routing. Your `src` folder structure defines the URLs.  
@@ -65,9 +61,28 @@ For example: this [About page](https://vani.b95.dev/other/about.html) resides in
 
 Note the `./` at the beginning - it's a relative path.
 
-For `link`, `a`, `script`, `img` tags, and similar elements, all `href` and `src` attributes should use relative paths.
+## File paths
 
----
+**vanilla-html** supports both relative and absolute paths, just like traditional web development:
+
+- **Relative paths** (e.g., `./images/hero.jpg`, `../styles/main.css`) are bundled and optimized by Parcel
+- **Absolute paths** (e.g., `/logo.png`, `/themes/dark.css`) reference files in the `public` folder and are served as-is
+
+```html
+<!-- Bundled by Parcel -->
+<img src="./images/hero.jpg" alt="Hero">
+<link rel="stylesheet" href="./styles/main.css">
+
+<!-- Served from public folder -->
+<img src="/logo.png" alt="Logo">
+<link rel="stylesheet" href="/themes/dark.css">
+```
+
+## Public folder
+
+Files in the `public` folder are copied directly to the build output without processing. 
+Use absolute paths (starting with `/`) to reference these files. 
+**vanilla-html** will watch the `public` folder for changes during development.
 
 ## HTML Components / Partials
 
@@ -96,14 +111,6 @@ To pass data to the component (data must be in JSON, not JS object):
   { "title": "vanilla-html guide" }
 </include>
 ```
-
----
-
-## Public folder
-
-For public files not referenced in `src` (e.g. `robots.txt`), you can place them in the `public` folder.
-
-`vanilla-html` will watch `public` folder for changes and copies its contents to `dist` build output.
 
 ## NPM Packages
 
