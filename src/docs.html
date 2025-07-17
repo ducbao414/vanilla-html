@@ -101,7 +101,9 @@
 
     <h2 id="public-folder" class="text-xl font-bold mt-8">Public folder</h2>
 
-    <p class="my-2 leading-relaxed">Files in the <code>public</code> folder are copied directly to the build output without processing. Use absolute paths (starting with <code>/</code>) to reference these files. <strong>vanilla-html</strong> will watch the public folder for changes during development.</p>
+    <p class="my-2 leading-relaxed">Files in the <code>public</code> folder are copied directly to the build output without processing. Use absolute paths (starting with <code>/</code>) to reference these files.</p>
+
+    <p class="my-2 leading-relaxed"><strong>vanilla-html</strong> will watch the <code>public</code> folder for changes and automatically copy its contents to the <code>dist</code> folder during development and builds.</p>
     
     <h2 id="html-components" class="text-xl font-bold mt-8">HTML Components/Partials</h2>
     <p class="my-2 leading-relaxed"><strong>vanilla-html</strong> uses <a href="https://github.com/posthtml/posthtml-include">posthtml-include</a> to support HTML components.</p>
