@@ -3,3 +3,5 @@ dist/
 node_modules/
 .wrangler/
 .DS_Store
+# Local Netlify folder
+.netlify
