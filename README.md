@@ -6,6 +6,14 @@ You can write plain HTML, JS, and CSS, or `npm install react react-dom` if you p
 
 Tailwind CSS is included by default. You can install additional UI libraries like DaisyUI if desired.
 
+  * [Getting Started](#getting-started)
+  * [Routing](#routing)
+  * [File Paths](#file-paths)
+  * [Public Folder](#public-folder)
+  * [HTML Components / Partials](#html-components--partials)
+  * [NPM Packages](#npm-packages)
+  * [Deployment](#deployment)
+
 ## Getting Started
 
 Create a new multi-page vanilla html site:  
@@ -30,7 +38,7 @@ npm run preview
 
 ## Routing
 
-**vanilla-html** uses file-based routing. Your `src` folder structure defines the URLs.  
+**vanilla-html** uses file-based routing. Your `src` folder structure defines the URLs, similar to the good old web.  
 Organize your HTML, scripts, styles, and assets (images, videos) however you see fit within `src` and its subfolders.
 
 For example: this [About page](https://vani.b95.dev/other/about.html) resides in the `src/other/` folder.
@@ -41,7 +49,7 @@ For example: this [About page](https://vani.b95.dev/other/about.html) resides in
 
 Note the `./` at the beginning - it's a relative path.
 
-## File paths
+## File Paths
 
 **vanilla-html** supports both relative and absolute paths, just like traditional web development:
 
@@ -58,7 +66,7 @@ Note the `./` at the beginning - it's a relative path.
 <link rel="stylesheet" href="/themes/dark.css">
 ```
 
-## Public folder
+## Public Folder
 
 Files in the `public` folder are copied directly to the build output without processing. 
 Use absolute paths (starting with `/`) to reference these files. 
