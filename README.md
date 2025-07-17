@@ -70,7 +70,8 @@ Note the `./` at the beginning - it's a relative path.
 
 Files in the `public` folder are copied directly to the build output without processing. 
 Use absolute paths (starting with `/`) to reference these files. 
-**vanilla-html** will watch the `public` folder for changes during development.
+
+**vanilla-html** will watch the `public` folder for changes and automatically copy its contents to the `dist` folder during development and builds.
 
 ## HTML Components / Partials
 
