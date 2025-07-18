@@ -1,4 +1,4 @@
-# 🗂️ A Multi-Page Vanilla HTML Template with Modern DX
+# A Multi-Page Vanilla HTML Template with Modern DX
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-0984e3)
 ![Live Reload](https://img.shields.io/badge/Live%20Reload-6c5ce7)
 ![Components](https://img.shields.io/badge/Components-00b894)
