@@ -5,7 +5,7 @@
   "scripts": {
     "watch:public": "node watch-public.js",
     "copy:public": "node watch-public.js --once",
-    "dev:parcel": "parcel 'src/**/*.html' --no-source-maps --port 3000",
+    "dev:parcel": "parcel 'src/**/*.html' --no-source-maps",
     "dev": "concurrently -k \"npm:watch:public\" \"npm:dev:parcel\"",
     "build:parcel": "parcel build 'src/**/*.html' --no-source-maps",
     "build": "npm run copy:public && npm run build:parcel",
