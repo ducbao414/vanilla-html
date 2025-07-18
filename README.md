@@ -90,13 +90,13 @@ Write your HTML components in `src/components`:
 Include them in your HTML files:
 
 ```html
-<include src="./components/header.html"></include>
+<include src="header.html"></include>
 ```
 
 To pass data to the component (data must be in JSON, not JS object):
 
 ```html
-<include src="./components/header.html">
+<include src="header.html">
   { "title": "vanilla-html guide" }
 </include>
 ```
