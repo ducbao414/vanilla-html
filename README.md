@@ -2,9 +2,9 @@
 
 **vanilla-html** is unopinionated and uses file-based routing (similar to the good old web).
 
-You can write plain HTML, JS, and CSS, or `npm install react react-dom` if you prefer.
+You can write plain HTML, JS, and CSS, or use frontend frameworks like React, Vue, Alpine, etc. if you prefer.
 
-Tailwind CSS is included by default. You can install additional UI libraries like DaisyUI if desired.
+Tailwind CSS is included by default. You can install additional UI component libraries like DaisyUI if desired.
 
   * [Getting Started](#getting-started)
   * [Routing](#routing)
