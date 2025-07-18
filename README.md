@@ -1,4 +1,9 @@
-# A Multi-Page Vanilla HTML Template with Modern DX (Tailwind, Live Reload, Components, NPM Packages, etc.)
+# A Multi-Page Vanilla HTML Template with Modern DX
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-0984e3)
+![Live Reload](https://img.shields.io/badge/Live%20Reload-6c5ce7)
+![Components](https://img.shields.io/badge/Components-00b894)
+![File-Based Routing](https://img.shields.io/badge/File--Based%20Routing-fdcb6e)
+![NPM Packages](https://img.shields.io/badge/NPM%20Packages-d63031)
 
 **vanilla-html** is unopinionated and uses file-based routing (similar to the good old web).
 
