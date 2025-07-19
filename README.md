@@ -119,8 +119,6 @@ Example (`style.css`):
 /* other css rules */
 html {
   font-family: system-ui;
-  width: 100%;
-  height: 100%;
 }
 ...
 ```
