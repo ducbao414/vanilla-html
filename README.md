@@ -16,6 +16,7 @@ Tailwind CSS is included by default. You can install additional UI component lib
   * [File Paths](#file-paths)
   * [Public Folder](#public-folder)
   * [HTML Components / Partials](#html-components--partials)
+  * [Tailwind CSS](#tailwind-css)
   * [NPM Packages](#npm-packages)
   * [Deployment](#deployment)
 
@@ -105,6 +106,26 @@ To pass data to the component (data must be in JSON, not JS object):
   { "title": "vanilla-html guide" }
 </include>
 ```
+
+## Tailwind CSS
+
+Tailwind CSS is installed by default, but remember to add `@import "tailwindcss";` to your CSS file.
+
+Example (`style.css`):
+
+```css
+@import "tailwindcss";
+
+/* other css rules */
+html {
+  font-family: system-ui;
+  width: 100%;
+  height: 100%;
+}
+...
+```
+
+You can also install additional UI component libraries like [DaisyUI](https://daisyui.com/docs/install/), [Basecoat](https://basecoatui.com/installation/#install-npm), etc. if needed.
 
 ## NPM Packages
 
