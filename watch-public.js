@@ -3,6 +3,7 @@ const chokidar = require('chokidar');
 const fs = require('fs');
 const path = require('path');
 
+const parcelCacheDir = path.resolve(__dirname, '.parcel-cache');
 const srcDir = path.resolve(__dirname, 'public');
 const destDir = path.resolve(__dirname, 'dist');
 
@@ -50,7 +51,12 @@ function deleteDir(dirPath) {
   }
 }
 
-function copyAllOnce() {
+function cleanUpAndCopy() {
+
+  if (fs.existsSync(parcelCacheDir)) {
+    fs.rmSync(parcelCacheDir, { recursive: true, force: true });
+    console.log(`[clean] ${parcelCacheDir}`);
+  }
 
   if (fs.existsSync(destDir)) {
     fs.rmSync(destDir, { recursive: true, force: true });
@@ -71,8 +77,9 @@ function copyAllOnce() {
   walk(srcDir);
 }
 
+cleanUpAndCopy();
+
 if (isOnce) {
-  copyAllOnce();
   process.exit(0);
 }
 
