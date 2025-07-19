@@ -5,6 +5,8 @@
 ![File-Based Routing](https://img.shields.io/badge/File--Based%20Routing-d35400?style=flat)
 ![Components](https://img.shields.io/badge/Components-10ac84?style=flat)
 
+> The goal is zero learning curve, just write HTML like it's the 2000s, but with modern conveniences when you need them.
+
 **vanilla-html** is unopinionated and uses file-based routing (similar to the good old web).
 
 You can write plain HTML, JS, and CSS, or use frontend frameworks like React, Vue, Alpine, etc. if you prefer.
